@@ -18,19 +18,28 @@
 const MAXIMOS_INTENTOS = 10, // Intentos máximos que tiene el jugador
     COLUMNAS = 4, // Columnas del memorama
     SEGUNDOS_ESPERA_VOLTEAR_IMAGEN = 1, // Por cuántos segundos mostrar ambas imágenes
-    NOMBRE_IMAGEN_OCULTA = "./img/question.png"; // La imagen que se muestra cuando la real está oculta
+    NOMBRE_IMAGEN_OCULTA = "./img/water/target.jpeg"; // La imagen que se muestra cuando la real está oculta
 new Vue({
     el: "#app",
     data: () => ({
         // La ruta de las imágenes. Puede ser relativa o absoluta
         imagenes: [
-            "./img/mario.png",
-            "./img/peach.png",
-            "./img/toad.png",
-            "./img/lakitu.png",
-            "./img/turtle.png",
-            "./img/goomba.png",
+            "./img/water/tap.gif",
+            "./img/water/world.gif",
+            "./img/water/wash_car.gif",
+            "./img/water/bottle2.gif",
+            "./img/water/sea.gif",
+            "./img/water/trash.gif",
+            "./img/water/fish.gif",
         ],
+        // imagenes: [
+        //     "./img/mario.png",
+        //     "./img/peach.png",
+        //     "./img/toad.png",
+        //     "./img/lakitu.png",
+        //     "./img/turtle.png",
+        //     "./img/goomba.png",
+        // ],
         memorama: [],
         // Útiles para saber cuál fue la carta anteriormente seleccionada
         ultimasCoordenadas: {
@@ -70,8 +79,11 @@ new Vue({
             Swal.fire({
                     title: "Perdiste",
                     html: `
-                <img class="img-fluid" src="./img/perdiste.png" alt="Perdiste">
-                <p class="h4">Agotaste tus intentos</p>`,
+                <img class="img-fluid" src="./img/perdiste.gif" alt="Perdiste">
+                <br>
+                <br>
+                <br>
+                <p class="h1">Agotaste tus intentos</p>`,
                     confirmButtonText: "Jugar de nuevo",
                     allowOutsideClick: false,
                     allowEscapeKey: false,
@@ -83,8 +95,11 @@ new Vue({
             Swal.fire({
                     title: "¡Ganaste!",
                     html: `
-                <img class="img-fluid" src="./img/ganaste.png" alt="Ganaste">
-                <p class="h4">Muy bien hecho</p>`,
+                <img class="img-fluid" src="./img/ganaste.gif" alt="Ganaste">
+                <br>
+                <br>
+                <br>
+                <p class="h1">Muy bien hecho</p>`,
                     confirmButtonText: "Jugar de nuevo",
                     allowOutsideClick: false,
                     allowEscapeKey: false,
