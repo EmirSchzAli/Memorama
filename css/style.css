@@ -18,7 +18,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-body {
+.body-style {
     /*Para la barra inferior fija*/
     background-color: #ace4d4;
     background-image: url(../img/water/bg.gif);
@@ -27,7 +27,24 @@ body {
     background-position: bottom;
 }
 
+.div-center{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    height: -webkit-fill-available;
+}
 
+.score-text{
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.7em; /* Tamaño de fuente base */
+    /* Tamaños de fuente responsivos */
+    font-size: calc(0.7em + 0.7vw); /* Ajuste basado en el ancho de la pantalla */
+    font-size: min(0.7em + 0.7vw, 1em); /* Limitar el tamaño máximo de la fuente */
+    font-size: max(0.7em + 0.7vw, 0.2em); /* Limitar el tamaño mínimo de la fuente */
+}
 .retro-family {
     font-family: "Press Start 2P", system-ui;
 }
@@ -35,8 +52,10 @@ body {
 img.card-img-top {
     object-fit: cover;
     cursor: pointer;
-    max-height: 180px !important;
-    max-width: 180px !important;
+    max-height: 200px !important;
+    max-width: 200px !important;
+    min-height: auto;
+    min-width: auto;
 }
 
 img.card-img-top.girar {
@@ -68,28 +87,6 @@ img.card-img-top.girar {
 
 .options:active {
     opacity: 0.5;
-}
-
-/* Keyframes for the zoom in zoom out animation */
-@keyframes zoom-in-zoom-out {
-
-    /* At the beginning of the animation */
-    0% {
-        /* Scale the element to its original size */
-        transform: scale(1, 1);
-    }
-
-    /* At the middle of the animation */
-    50% {
-        /* Scale the element to 1.5 times its original size */
-        transform: scale(1.5, 1.5);
-    }
-
-    /* At the end of the animation */
-    100% {
-        /* Scale the element back to its original size */
-        transform: scale(1, 1);
-    }
 }
 
 .center {
@@ -137,7 +134,7 @@ img.card-img-top.girar {
     animation: move 5s infinite linear;
     color: #ebb55f;
     top: 50%; /* Ajustado para centrar verticalmente el texto */
-    transform: translateY(-56%); /* Ajustado para centrar verticalmente el texto */
+    transform: translateY(-50%); /* Ajustado para centrar verticalmente el texto */
 }
 
 @keyframes move {
@@ -146,7 +143,7 @@ img.card-img-top.girar {
     }
 
     to {
-        left: -100%; /* Cambiado a unidad relativa */
+        left: -120%; /* Cambiado a unidad relativa */
     }
 }
 

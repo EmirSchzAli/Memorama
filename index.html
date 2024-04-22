@@ -28,33 +28,33 @@
         <link href="./css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body class="body-style">
         <main role="main" class="container-fluid" id="app">
-            <div class="row" style="margin: 30px;">
-                <div class="col-3 mb-2" style="width: 25%;">
-                    <p>
-                        <span class="h4">Intentos: {{intentos}}/{{MAXIMOS_INTENTOS}}&nbsp;</span>
-                        <span class="h4">Aciertos: {{aciertos}}</span>
+            <div class="row" style="margin: 30px 0px; align-items: center;">
+                <div class="col" style="width: 25%;">
+                    <p class="text-wrap score-text">
+                        <span>Intentos: {{intentos}}/{{MAXIMOS_INTENTOS}}&nbsp;</span>
+                        <span>Aciertos: {{aciertos}}</span>
                     </p>
                 </div>
                 <div class="col" style="width: 50%;">
                     <div id="screen" class="table center">
                         <div class="monitor-wrapper center">
-                          <div class="monitor center">
-                            <p>Juego del Memorama</p>
-                          </div>
+                            <div class="monitor center">
+                                <p>JUEGO DEL MEMORAMA</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-3 mb-2" style="width: 25%;">
-                    <img class="options" src="/img/reset_button.png" alt="boton" @click="reiniciarJuego()">
+                <div class="col" style="width: 25%;">
+                    <img class="options" src="./img/reset_button.png" alt="boton" @click="reiniciarJuego()">
                 </div>
             
                 
             </div>
             <div class="div-center">
                 <div v-for="(fila, indiceFila) in memorama" :key="indiceFila"
-                    class="row justify-content-evenly">
+                    class="row justify-content-evenly" style="margin: 0;">
                     <div :key="indiceFila+''+indiceImagen" class="col-3"
                         v-for="(imagen, indiceImagen) in fila">
                         <div class="mb-3">
