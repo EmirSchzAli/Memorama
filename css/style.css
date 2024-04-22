@@ -15,26 +15,192 @@
     Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
     Contacto:   https://parzibyte.me/blog/contacto/
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+    /*Para la barra inferior fija*/
+    background-color: #ace4d4;
+    background-image: url(../img/water/bg.gif);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+
+.retro-family {
+    font-family: "Press Start 2P", system-ui;
+}
+
 img.card-img-top {
     object-fit: cover;
     cursor: pointer;
-    max-height: 150px !important;
-    max-width: 150px !important;
+    max-height: 180px !important;
+    max-width: 180px !important;
 }
 
 img.card-img-top.girar {
-    animation: fadein 2s;
+    animation: fadein 1s;
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
 }
 
 @keyframes fadein {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
-body {
-  /*Para la barra inferior fija*/
-  padding-bottom: 70px;
+
+.options {
+    display: block;
+    margin-left: auto;
+    width: 80px;
+    height: auto;
+    transition: transform 0.2s ease;
 }
+.options:hover {
+    transform: scale(1.5);
+}
+
+.options:active {
+    opacity: 0.5;
+}
+
+/* Keyframes for the zoom in zoom out animation */
+@keyframes zoom-in-zoom-out {
+
+    /* At the beginning of the animation */
+    0% {
+        /* Scale the element to its original size */
+        transform: scale(1, 1);
+    }
+
+    /* At the middle of the animation */
+    50% {
+        /* Scale the element to 1.5 times its original size */
+        transform: scale(1.5, 1.5);
+    }
+
+    /* At the end of the animation */
+    100% {
+        /* Scale the element back to its original size */
+        transform: scale(1, 1);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.table {
+    width: 100%; /* Cambiado a unidad relativa */
+    max-width: 600px; /* Agregado para limitar el ancho máximo */
+    height: 20vh; /* Cambiado a unidad relativa */
+    max-height: 100px; /* Agregado para limitar la altura máxima */
+    background-color: #d4e5ff;
+}
+
+.table .monitor-wrapper {
+    background: #050321;
+    width: 95%; /* Cambiado a unidad relativa */
+    max-width: 580px; /* Agregado para limitar el ancho máximo */
+    height: 60vw; /* Cambiado a altura relativa */
+    max-height: 80px; /* Agregado para limitar la altura máxima */
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor {
+    width: 90%; /* Cambiado a unidad relativa */
+    max-width: 530px; /* Agregado para limitar el ancho máximo */
+    height: 45vw; /* Cambiado a altura relativa */
+    max-height: 60px; /* Agregado para limitar la altura máxima */
+    background-color: #344151;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor p {
+    font-family: "VT323", monospace;
+    font-size: 4vw; /* Cambiado a tamaño de fuente relativo */
+    position: relative;
+    display: inline-block;
+    animation: move 5s infinite linear;
+    color: #ebb55f;
+    top: 50%; /* Ajustado para centrar verticalmente el texto */
+    transform: translateY(-56%); /* Ajustado para centrar verticalmente el texto */
+}
+
+@keyframes move {
+    from {
+        left: 100%; /* Cambiado a unidad relativa */
+    }
+
+    to {
+        left: -100%; /* Cambiado a unidad relativa */
+    }
+}
+
+
+
+
+
+/* .center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.table {
+    width: 600px;
+    height: 100px;
+    background-color: #d4e5ff;
+}
+
+.table .monitor-wrapper {
+    background: #050321;
+    width: 580px;
+    height: 80px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor {
+    width: 530px;
+    height: 60px;
+    background-color: #344151;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor p {
+    font-family: "VT323", monospace;
+    font-size: 71px;
+    position: relative;
+    display: inline-block;
+    animation: move 5s infinite linear;
+    color: #ebb55f;
+    top: -30px;
+}
+
+@keyframes move {
+    from {
+        left: 800px;
+    }
+
+    to {
+        left: -800px;
+    }
+} */

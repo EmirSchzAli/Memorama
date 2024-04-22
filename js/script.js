@@ -15,9 +15,9 @@
     Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
     Contacto:   https://parzibyte.me/blog/contacto/
 */
-const MAXIMOS_INTENTOS = 10, // Intentos máximos que tiene el jugador
+const MAXIMOS_INTENTOS = 20, // Intentos máximos que tiene el jugador
     COLUMNAS = 4, // Columnas del memorama
-    SEGUNDOS_ESPERA_VOLTEAR_IMAGEN = 1, // Por cuántos segundos mostrar ambas imágenes
+    SEGUNDOS_ESPERA_VOLTEAR_IMAGEN = 2, // Por cuántos segundos mostrar ambas imágenes
     NOMBRE_IMAGEN_OCULTA = "./img/water/target.jpeg"; // La imagen que se muestra cuando la real está oculta
 new Vue({
     el: "#app",
@@ -25,7 +25,6 @@ new Vue({
         // La ruta de las imágenes. Puede ser relativa o absoluta
         imagenes: [
             "./img/water/tap.gif",
-            "./img/water/world.gif",
             "./img/water/wash_car.gif",
             "./img/water/bottle2.gif",
             "./img/water/sea.gif",
