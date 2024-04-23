@@ -144,6 +144,7 @@ new Vue({
                 this.ultimasCoordenadas.indiceImagen = indiceImagen;
                 return;
             }
+            
             // Si es el que estaba mostrada, lo ocultamos de nuevo
             let imagenSeleccionada = this.memorama[indiceFila][indiceImagen];
             let ultimaImagenSeleccionada = this.memorama[this.ultimasCoordenadas.indiceFila][this.ultimasCoordenadas.indiceImagen];

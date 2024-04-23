@@ -28,7 +28,7 @@
         <link href="./css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     </head>
-    <body class="body-style">
+    <body class="body-style" ontouchstart="">
         <main role="main" class="container-fluid" id="app">
             <div class="row" style="margin: 30px 0px; align-items: center;">
                 <div class="col" style="width: 25%;">
@@ -47,7 +47,10 @@
                     </div>
                 </div>
                 <div class="col" style="width: 25%;">
-                    <img class="options" src="./img/reset_button.png" alt="boton" @click="reiniciarJuego()">
+                    <button id="reset-button" @click="reiniciarJuego()" class="options">
+                        <img src="./img/reset_button.svg" alt="boton">
+                    </button>
+                    
                 </div>
             
                 
@@ -71,6 +74,7 @@
 
 
         </main>
+
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="./js/sweetalert2.all.min.js"></script>
         <script src="./js/vue.min.js"></script>

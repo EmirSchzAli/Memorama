@@ -23,8 +23,11 @@
     background-color: #ace4d4;
     background-image: url(../img/water/bg.gif);
     background-repeat: repeat-x;
-    background-attachment: fixed;
     background-position: bottom;
+    background-attachment: fixed;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
 }
 
 .div-center{
@@ -33,7 +36,6 @@
     right: 0;
     padding: 10px;
     text-align: center;
-    height: -webkit-fill-available;
 }
 
 .score-text{
@@ -61,7 +63,7 @@ img.card-img-top {
 img.card-img-top.girar {
     animation: fadein 1s;
     transform: rotateY(180deg);
-    transition: transform 0.5s;
+    transition: transform 0.5s ease;
 }
 
 @keyframes fadein {
@@ -75,18 +77,28 @@ img.card-img-top.girar {
 }
 
 .options {
-    display: block;
     margin-left: auto;
+    display: block;
+    background-color: transparent;
+    border: none;
+    transition: transform 100ms ease;
+}
+
+.options img {
     width: 80px;
     height: auto;
-    transition: transform 0.2s ease;
 }
-.options:hover {
-    transform: scale(1.5);
+
+.options:focus {
+    outline: none;
 }
 
 .options:active {
-    opacity: 0.5;
+    transform: scale(1.5);
+}
+
+.options:active > img {
+    content:url(../img/reset_button_yellow.svg);
 }
 
 .center {
