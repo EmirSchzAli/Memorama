@@ -60,20 +60,20 @@ img.card-img-top {
     min-width: auto;
 }
 
-img.card-img-top.girar {
-    animation: fadein 1s;
-    transform: rotateY(180deg);
-    transition: transform 0.5s ease;
-}
-
 @keyframes fadein {
     from {
         opacity: 0;
     }
-
+    
     to {
         opacity: 1;
     }
+}
+
+img.card-img-top.girar {
+    animation: fadein 1s;
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease;
 }
 
 .options {
@@ -158,9 +158,6 @@ img.card-img-top.girar {
         left: -120%; /* Cambiado a unidad relativa */
     }
 }
-
-
-
 
 
 /* .center {

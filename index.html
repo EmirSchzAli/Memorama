@@ -74,7 +74,17 @@
 
 
         </main>
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var elementoEliminar = document.evaluate("//div[@style='text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                if (elementoEliminar) {
+                    elementoEliminar.remove();
+                    console.log("Se eliminó el elemento con éxito.");
+                } else {
+                    console.log("No se encontró ningún elemento para eliminar.");
+                }
+            });
+        </script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="./js/sweetalert2.all.min.js"></script>
         <script src="./js/vue.min.js"></script>
