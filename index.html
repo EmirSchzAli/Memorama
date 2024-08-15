@@ -16,7 +16,9 @@
     Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
     Contacto:   https://parzibyte.me/blog/contacto/
 -->
-<html lang="es">
+
+ <!-- Versioón Ali -->
+<!-- <html lang="es">
     <head>
         <meta charset="utf-8">
         <meta
@@ -71,8 +73,6 @@
                 </div>
             </div>
             
-
-
         </main>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
@@ -89,6 +89,67 @@
         <script src="./js/sweetalert2.all.min.js"></script>
         <script src="./js/vue.min.js"></script>
         <script src="./js/script.js"></script>
+    </body>
+
+</html> -->
+
+<!-- Versión Esteban -->
+<html lang="es">
+    <head> 
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        <meta name="description" content="Jugar memorama en línea">
+        <title>Cuidemos el Agua</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="./css/style.css" rel="stylesheet"> -->
+        <link href="./css/style-vE.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    </head>
+    <body class="body-style">
+        <main role="main" class="container-fluid" id="app">
+
+            <div class="row align-items-center score-section">
+                <div class="col-25">
+                    <p class="text-wrap score-text">
+                        <span>Intentos: {{intentos}}/{{MAXIMOS_INTENTOS}}&nbsp;</span>
+                        <span>Aciertos: {{aciertos}}</span>
+                    </p>
+                </div>
+                <div class="col-55">
+                    <div id="screen" class="table">
+                        <div class="monitor-wrapper center">
+                            <div class="monitor center">
+                                <p>JUEGO DEL MEMORAMA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20">
+                    <img class="options" src="./img/reset_button.png" alt="boton" @click="reiniciarJuego()">
+                </div>
+            </div>
+
+            <div class="div-center">
+                <div class="grid-container">
+                    <div v-for="(imagen, indice) in memorama" :key="indice" class="grid-item">
+                        <img @click="voltear(indice)" 
+                             :class="{'girar': imagen.mostrar}"
+                             :src="(imagen.mostrar ? imagen.ruta : NOMBRE_IMAGEN_OCULTA)" 
+                             class="card-img-top img-fluid img-thumbnail">
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+        </main>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="./js/sweetalert2.all.min.js"></script>
+        <script src="./js/vue.min.js"></script>
+        <script src="./js/script-vE.js"></script>
     </body>
 
 </html>
