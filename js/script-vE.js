@@ -23,7 +23,7 @@ const MAXIMOS_INTENTOS = 20, // Intentos máximos que tiene el jugador
         "./img/air/carta-1.jpg",
         "./img/air/carta-2.jpg",
     ];
-
+// Elegir una imagen al azar para que sea la que se muestre cuando la real está oculta
 NOMBRE_IMAGEN_OCULTA = NOMBRES_IMAGEN_OCULTA[Math.floor(Math.random() * NOMBRES_IMAGEN_OCULTA.length)];
 
 new Vue({
